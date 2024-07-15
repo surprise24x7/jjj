@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Job Vacancy Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 120px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6a00;
+        }
+        h2 {
+            text-align: center;
+            color: #ff6a00;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .submit-section {
+            background-color: #ff6a00;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .submit-section a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            color: #888;
+        }
+
+        footer a {
+            color: #ff6a00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .bar-container {
+            max-width: 400px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar {
+            flex: 1;
+            height: 35px;
+            border: 2px solid #ff6a00;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background-color: #ff6a00;
+            width: 0%;
+        }
+
+        .percentage {
+            width: 50px;
+            text-align: center;
+        }
+
+        .button,#claim {
+            background: #4ab115;
+            border-radius: 10px;
+            width: 80%;
+            line-height: 45px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            margin: 20px auto;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+      a{
+            text-decoration: none;
+        color:#fff;
+      }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .button,#claim{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+        <main>
+            <h2>Step 2</h2>
+            <p>Share about our platform on WhatsApp with 20 friends by clicking the "WhatsApp" button below to continue.</p>
+            <div id="share" class="bottom">
+                <div class="button" id="whatsapp">Share on WhatsApp&nbsp; →</div>
+                <h4 class="textlastup">Share until the orange bar is full!</h4>
+                <div class="bar-container">
+                    <div class="bar">
+                        <div id="fill2" class="bar-fill"></div>
+                    </div>
+                    <div class="percentage" id="percentage2">0%</div>
+                </div>
+                <div class="button" onclick="tipn()">Continue</div>
+            </div>
+            <div id="claim" class="hidden">
+                <a  href="https://clankexpelledidentification.com/agyv7ex6?key=96eb9366cb1c6c1b8ab6ab46c574e6fb" >Continue</a>
+            </div>
+        </main>
+        <footer>
+            <p>© 2024 Alibaba Group. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js"></script>
+    <script>
+        var width = localStorage.getItem('MAMA7lwa') || 0;
+
+        $(document).ready(function() {
+            if (width > 0) {
+                $("#share").fadeIn(0);
+                $("#fill2").css("width", width + "%");
+                $("#percentage2").text(width + "%");
+            }
+
+            $("#whatsapp").click(function() {
+                window.open('whatsapp://send?text=🌟%20*Sell%20Your%20Hamster%20Coin%20at%20the%20Best%20Price!*%20🌟%0A%0A🪙%20*1%20Hamster%20Coin%20=%203%20Rupees*%20💵%0A%0A💸%20*Sell%20Now!*%20👇%0A%0A🔗https://sellhamster.site/');
+                updateProgress();
+            });
+
+            function updateProgress() {
+                if (width < 100) {
+                    width = Math.min(100, width + 10);
+                    $("#fill2").css("width", width + "%");
+                    $("#percentage2").text(width + "%");
+                    localStorage.setItem('MAMA7lwa', width);
+                }
+
+                if (width >= 100) {
+                    $("#share").fadeOut(0);
+                    $("#claim").fadeIn(1000);
+                }
+            }
+        });
+
+        function tipn() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Unfortunately...',
+                text: 'To Continue, You have to share with friends. Share until the orange bar is full!',
+            });
+        }
+    </script>
+</body>
+</html>
